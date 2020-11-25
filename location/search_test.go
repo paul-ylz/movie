@@ -17,7 +17,7 @@ type handlerTestSuite struct {
 
 func (s *handlerTestSuite) SetupTest() {
 	r := http.NewServeMux()
-	r.HandleFunc("/search", Search(new(dep)))
+	r.HandleFunc("/search", Search())
 	s.server = httptest.NewServer(r)
 }
 
